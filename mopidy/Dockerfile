@@ -38,10 +38,10 @@ RUN curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
         gstreamer1.0-plugins-ugly \
         gstreamer1.0-pulseaudio 
   
-   RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
-    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
-    \
-    && apt-get purge -y --auto-remove \
+   RUN curl https://bootstrap.pypa.io/get-pip.py | python3 
+   RUN pip3 install --no-cache-dir -r /tmp/requirements.txt 
+    
+   RUN apt-get purge -y --auto-remove \
         dirmngr \
         gpg-agent \
         gpg \
