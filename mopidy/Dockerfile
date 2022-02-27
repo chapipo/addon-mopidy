@@ -29,10 +29,10 @@ RUN curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
         libasound2-dev \
         libspotify12 \
         libspotify-dev \
-        zlib1g-dev=1:1.2.11.dfsg-1 \
-        build-essential=12.6 \
-        python3-dev=3.7.3-1 \
-        python3-gi=3.30.4-1 \
+        zlib1g-dev \
+        build-essential \
+        python3-dev \
+        python3-gi \
         python3-gst-1.0 \
         gstreamer1.0-alsa \
         gstreamer1.0-plugins-bad \
@@ -42,11 +42,6 @@ RUN curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
   
    RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
-    \
-    && find /usr/local/lib/python3.7/ -type d -name tests -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -type d -name test -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name __pycache__ -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name "*.pyc" -depth -exec rm -f {} \; \
     \
     && apt-get purge -y --auto-remove \
         dirmngr \
