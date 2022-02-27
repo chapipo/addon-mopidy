@@ -3,7 +3,4 @@ Pykka
 Mopidy-Local
 Mopidy-AlsaMixer
 Mopidy-Iris
-Mopidy-SoundCloud
-Mopidy-GMusic
-Mopidy-Youtube
 Mopidy-MPD
