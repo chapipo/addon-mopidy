@@ -18,10 +18,10 @@ RUN \
         gpg \
         nginx \
         git 
-RUN curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
-    &&curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
-    \
-    && apt-get update 
+#RUN curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
+#    &&curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
+#    \
+#    && apt-get update 
  RUN apt-get install -y --no-install-recommends \
         libffi-dev \
         libxml2-dev \
